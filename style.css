@@ -1,0 +1,183 @@
+body {
+  font-family: "Hiragino Sans", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #5ea3ec, #77bdf8);
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.note {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  opacity: 0.9;
+}
+
+.note-2 {
+  font-size: 0.7rem;
+  /* margin-top: 0.3rem; */
+}
+
+.note-red {
+  font-size: 0.7rem;
+  color: rgb(204, 143, 143);
+  /* margin-top: 0.3rem; */
+}
+
+main {
+  padding: 1.5rem;
+  max-width: 950px;
+  margin: auto;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  /* background: white; */
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-color: #666;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #fff;
+}
+
+/* 🧁 テーブル（やわらかいカード風） 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 0.2rem;
+  text-align: center;
+}
+
+
+
+th {
+  background: #f0f4fa;
+  font-weight: 600;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background: #fafcff;
+}
+
+tr:hover {
+  background: #f2f7ff;
+}
+*/
+
+
+
+table {
+  width: 100%;
+  border-collapse: separate; /* ✅ collapseから変更！ */
+  border-spacing: 0 8px;     /* ✅ 行間を8px空ける（好みに調整可能） */
+  background: transparent;   /* 行ごとのカード感を出す */
+}
+
+th {
+  background: #f0f4fa;
+  font-weight: 600;
+  color: #333;
+  padding: 0.6rem;
+}
+
+td {
+  background: #ffffff;          /* 各行を白でカード風に */
+  border-radius: 8px;           /* 行ごとに角を少し丸める */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  padding: 0.6rem 0.3rem;       /* セル内も少しゆとり */
+  text-align: center;       /* ✅ 横方向の中央寄せ */
+  vertical-align: middle;   /* ✅ 縦方向の中央寄せ */
+}
+
+tr:hover td {
+  background: #f2f7ff;          /* hover時に全体がふんわり変化 */
+}
+
+
+
+/* 🎨 キャラ名カラー（背景色） */
+.name-red { background: #ffe5e5; border-radius: 6px; }
+.name-blue { background: #e5f0ff; border-radius: 6px; }
+.name-green { background: #e8f7ec; border-radius: 6px; }
+.name-purple { background: #f0e8ff; border-radius: 6px; }
+.name-gold { background: #fff4da; border-radius: 6px; }
+
+
+/* 💎 カードランクカラー（背景） */
+.rank-SSR { background: #ffd9f2; border-radius: 6px; }
+.rank-SR { background: #f9fafa; border-radius: 6px;}
+.rank-R { background: #fff8da; border-radius: 6px; }
+
+footer {
+  background: #f9f9f9;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.adsense {
+  margin-top: 1rem;
+}
+
+/* ✅ レスポンシブ対応 */
+@media screen and (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  select {
+    width: 100%;
+  }
+  table {
+    font-size: 0.9rem;
+  }
+  th, td {
+    padding: 0.5rem;
+  }
+}
